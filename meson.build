@@ -47,4 +47,3 @@ endif
 
 subdir('lib/font_renderer')
 subdir('src')
-

@@ -1,9 +1,17 @@
+platform = 'posix'
+if host_machine.system() == 'windows'
+    platform = 'windows'
+endif
+
 lite_sources = [
     'api/api.c',
     'api/cp_replace.c',
     'api/renderer.c',
     'api/renderer_font.c',
     'api/system.c',
+    'api/process.c',
+    'reproc.c',
+    'reproc.' + platform + '.c',
     'renderer.c',
     'renwindow.c',
     'fontdesc.c',
@@ -25,4 +33,3 @@ executable('lite',
     install: true,
     gui_app: true,
 )
-
